@@ -2,7 +2,7 @@
 const SOFIA_WHATSAPP = "";
 
 // Reemplazar por tu email para que el formulario tambien abra un correo dirigido a vos.
-const OWNER_EMAIL = "";
+const OWNER_EMAIL = "lulisdero20@gmail.com";
 
 const navBtn = document.getElementById("nav-btn");
 const navLinks = document.getElementById("nav-links");
