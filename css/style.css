@@ -244,6 +244,11 @@ p {
   align-items: start;
 }
 
+.contact-channel-note {
+  margin-top: 12px;
+  font-size: 0.92rem;
+}
+
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -286,10 +291,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 14px;
 }
 
-footer p {
+.footer-credits p {
   margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.footer-credits p + p {
+  margin-top: 4px;
 }
 
 #to-top {

@@ -1,4 +1,8 @@
-﻿const CONTACT_EMAIL = "sofiaparoditraduccion@gmail.com";
+﻿const OWNER_WHATSAPP = "5491126601086";
+const SOFIA_WHATSAPP = "";
+
+// Reemplazar por tu email para que el formulario tambien abra un correo dirigido a vos.
+const OWNER_EMAIL = "";
 
 const navBtn = document.getElementById("nav-btn");
 const navLinks = document.getElementById("nav-links");
@@ -43,16 +47,41 @@ if (contactForm) {
     const message = document.getElementById("form-message").value.trim();
 
     if (!name || !email || !message) {
-      formNote.textContent = "Completá todos los campos obligatorios.";
+      formNote.textContent = "Completa todos los campos obligatorios.";
       return;
     }
 
-    const subject = encodeURIComponent(`Consulta de traducción - ${name}`);
-    const body = encodeURIComponent(
-      `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
-    );
+    const plainBody = [
+      "Consulta de traduccion",
+      `Nombre: ${name}`,
+      `Email: ${email}`,
+      "",
+      "Mensaje:",
+      message,
+    ].join("\n");
 
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    formNote.textContent = "Se abrió tu cliente de correo para enviar la consulta.";
+    const encodedSubject = encodeURIComponent(`Consulta de traduccion - ${name}`);
+    const encodedBody = encodeURIComponent(plainBody);
+
+    const whatsappTargets = [OWNER_WHATSAPP, SOFIA_WHATSAPP]
+      .map((value) => value.trim())
+      .filter(Boolean);
+
+    whatsappTargets.forEach((phone) => {
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(plainBody)}`;
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    });
+
+    if (OWNER_EMAIL.trim()) {
+      window.location.href = `mailto:${OWNER_EMAIL}?subject=${encodedSubject}&body=${encodedBody}`;
+    }
+
+    if (!OWNER_EMAIL.trim()) {
+      formNote.textContent =
+        "WhatsApp abierto. Para enviar tambien por email, configura OWNER_EMAIL en js/script.js.";
+      return;
+    }
+
+    formNote.textContent = "Se abrio correo y WhatsApp con la consulta cargada.";
   });
 }
