@@ -1,0 +1,40 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PARODI TRADUCCIONES</title>
+  <desc id="desc">Logo institucional para Parodi Traducciones</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff8f3"/>
+      <stop offset="100%" stop-color="#ecd2bf"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b7673c"/>
+      <stop offset="100%" stop-color="#8f4e2f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g transform="translate(95 130)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="220" rx="34" fill="url(#accent)"/>
+    <circle cx="182" cy="38" r="18" fill="#fff4eb" opacity="0.85"/>
+    <text x="48" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="108" font-weight="700" fill="#ffffff">PT</text>
+  </g>
+
+  <g transform="translate(370 172)">
+    <text x="0" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="4" fill="#2b1d16">
+      PARODI
+    </text>
+    <text x="0" y="185" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="3" fill="#8f4e2f">
+      TRADUCCIONES
+    </text>
+    <text x="0" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="500" fill="#5d463b">
+      Traduccion profesional | Espanol e Ingles
+    </text>
+  </g>
+
+  <rect x="0" y="594" width="1200" height="36" fill="#8f4e2f" opacity="0.12"/>
+</svg>
+
