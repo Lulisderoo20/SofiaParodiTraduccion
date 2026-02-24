@@ -1,19 +1,28 @@
-### Hi there 👋
+﻿# SofiaParodiTraduccion
 
-<!--
-**GeruMansi/GeruMansi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Landing page MVP for professional translation services.
 
-Here are some ideas to get you started:
+## Stack
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- HTML
+- CSS
+- Vanilla JavaScript
 
+## Local preview
 
-VARIABLES
+```powershell
+python -m http.server 5600
+```
+
+Open:
+
+- http://127.0.0.1:5600/
+
+## MVP scope
+
+- Business-focused hero
+- About section
+- Services section
+- Work process section
+- Contact form (opens email client)
+- Responsive navigation for mobile and desktop
