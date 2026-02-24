@@ -79,14 +79,18 @@ p {
 }
 
 .brand {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.02rem;
   font-weight: 700;
-  color: #ffffff;
-  background: var(--accent);
+  letter-spacing: 0.2px;
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.brand:hover {
+  color: var(--accent-dark);
 }
 
 .nav-toggle {
@@ -354,3 +358,10 @@ footer {
     max-width: 220px;
   }
 }
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 0.94rem;
+  }
+}
+
